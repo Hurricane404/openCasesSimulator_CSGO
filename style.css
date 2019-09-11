@@ -109,9 +109,9 @@ body,html{
     top: 50%;
     left: 24%;
     transform: translate(-50%, -50%);
-    height: 18vw;
+    height: 100%;
     width: 7px;
-    top: 12vw;
+    top: 50%;
     background: var(--color2);
     z-index: 10000;
 }
