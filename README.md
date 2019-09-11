@@ -1,0 +1,1 @@
+# openCasesSimulator_CSGO
