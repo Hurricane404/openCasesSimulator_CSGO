@@ -80,7 +80,7 @@ this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.ne
        var itemRaro = Math.floor(Math.random() * 45)
       var itemRandom = Math.floor(Math.random() * this.items.length)
       var haha = 0;
-      if(itemRaro <= 10){
+      if(itemRaro <= 4){
         haha = 1
       } else{
         while(this.items[itemRandom].preco >= 100 && this.items[itemRandom].preco <= 2000){
@@ -104,7 +104,7 @@ this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.ne
       var haha = 0
       var itemRaro = Math.floor(Math.random() * 45)
       var itemRandom = Math.floor(Math.random() * 30)
-      if(itemRaro <= 40){
+      if(itemRaro <= 50){
         haha = 1
       } else{
         while(this.newItems[itemRandom].preco >= 100 && this.newItems[itemRandom].preco <= 2000){
