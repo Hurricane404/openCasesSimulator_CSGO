@@ -45,7 +45,7 @@ this.itemsAdd("★ M9 Bayonet | Doppler", "https://steamcommunity-a.akamaihd.net
 this.itemsAdd("★ StatTrak™ Karambit | Doppler", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf2PLacDBA5ciJlY20k_jkI7fUhFRB4MRij7j--YXygECLpxIuNDztJYDGcg4_aFjS8gDoxOfn15G7vpXLzyFh6HMk4nranhfmgExJP7NsguveFwu10KRx-Q/360fx360f", 0, 690)
     this.generateItem()
     this.meusItems = localStorage.meusItems ? JSON.parse(localStorage.meusItems): []
-    this.saldo = localStorage.saldo ? JSON.parse(localStorage.saldo): 1000
+    this.saldo = localStorage.saldo ? JSON.parse(localStorage.saldo): 100
   },
   methods: {
      itemsAdd(name, image, rari, preco){
@@ -71,11 +71,20 @@ this.itemsAdd("★ StatTrak™ Karambit | Doppler", "https://steamcommunity-a.ak
       }
     },
     openCases(){
-      if(this.saldo >= 300){
-      this.saldo -= 300
+      if(this.saldo >= 20){
+      this.saldo -= 20
       this.scroll = 36
       this.open = true
+      var haha = 0
+      var itemRaro = Math.floor(Math.random() * 15)
       var itemRandom = Math.floor(Math.random() * 30)
+      if(itemRaro >= 0 && itemRaro <= 13){
+        haha = 1
+      } else{
+        while(this.newItems[itemRandom].preco <= 500){
+        var itemRandom = Math.floor(Math.random() * 30)
+        }
+      }
       this.gainedItem = {
          name: this.newItems[itemRandom].name,
          image: this.newItems[itemRandom].image,
