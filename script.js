@@ -8,7 +8,8 @@ var app = new Vue({
      scroll: 36,
      tryAgain: true,
      saldo: 100,
-    meusItems: []
+    meusItems: [],
+    casesValue: 100
    },
   mounted() {
      this.itemsAdd("AK-47 | Safari Mesh", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zFdC5K08i3mr-GkvP9JrbummpD78A_2LnF9NT0jADj_0BlNWChLdOWewFoNV2C-1TrwOa6h8K66c_JzXVmsz5iuyiPLPTaCA/360fx360f", 0, 1)
@@ -97,8 +98,8 @@ this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.ne
       }
     },
     openCases(){
-      if(this.saldo >= 20){
-      this.saldo -= 20
+      if(this.saldo >= this.casesValue){
+      this.saldo -= this.casesValue
       this.scroll = 36
       this.open = true
       var haha = 0
