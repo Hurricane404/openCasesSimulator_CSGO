@@ -56,6 +56,9 @@ this.itemsAdd("★ Bayonet | Forest DDPAT", "https://steamcommunity-a.akamaihd.n
 this.itemsAdd("★ Bayonet | Autotronic", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotLu8JAllx8zPYgJA7cW5moWfqPbhJ7TFhGRf4cZOhuDG_ZjKhFWmrBZyZzv0co6Ve1A6NA3U-VXql7jn05S7vM_JzXNiuiAi5H2LnBzkhE0eO_sv26L9s_p6DA/360fx360f", 2, 545)
 this.itemsAdd("★ StatTrak™ Bayonet | Marble Fade", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotLu8JAllx8zJfAJP7c60mIW0kfbwNoTdn2xZ_Pp9i_vG8ML0jFfm80U6YGCgLY7EewA9YV7S-gC3xubshMXtvsjMyXdjuCIrsSmLgVXp1iqhnkny/360fx360f", 2, 645)
 this.itemsAdd("★ StatTrak™ Bayonet | Lore", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpotLu8JAllx8zLZAJA7cW5moWfqPv7Ib7um25V4dB8teXA54vwxlXs_BVpZz-ldYbDcwJsaAzUqATswu3v08Xo7syYyHphvCcm43iOnUCpwUYbyMGRBAc/360fx360f", 2, 645)
+ this.itemsAdd("★ Butterfly Knife | Crimson Web", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf0ebcZThQ6tCvq4iSqODxMajum25V4dB8teXA54vwxgW2qEc5NW-iIYORcFI5NwzQ8lS7lOq50MW7tJSbnXQy7yRx4H7bnRGpwUYbInjudbk/360fx360f", 2, 493)
+this.itemsAdd("★ Butterfly Knife | Fade", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf0ebcZThQ6tCvq4GKqPH1N77ummJW4NFOhujT8om7igW1qUY6MWqmcIadcw47MFrW_FK9xbzpgZ607Z7PzSAxuXYg53-Llwv330-D9XTwcQ/360fx360f", 2, 900)
+this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJfxPrMfipP7dezhr-KmsjwPKvBmm5D19V5i_rEprPigVC7vCwwOj6rYOnJI0RpNEbVrAXvlOi8gcDtvZrJziA1vCAqt3-MyRHm0hoYaec-1_3PQF7NVfNIAuDcUWvXnfMD/360fx360f", 2, 720)
     this.generateItem()
     this.meusItems = localStorage.meusItems ? JSON.parse(localStorage.meusItems): []
     this.saldo = localStorage.saldo ? JSON.parse(localStorage.saldo): 1000
@@ -94,7 +97,7 @@ this.itemsAdd("★ StatTrak™ Bayonet | Lore", "https://steamcommunity-a.akamai
       if(itemRaro >= 0 && itemRaro <= 40){
         haha = 1
       } else{
-        while(this.newItems[itemRandom].preco <= 500){
+        while(this.newItems[itemRandom].preco <= 100){
         var itemRandom = Math.floor(Math.random() * 30)
         }
       }
