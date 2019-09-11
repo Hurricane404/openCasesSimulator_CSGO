@@ -61,7 +61,7 @@ this.itemsAdd("★ Butterfly Knife | Fade", "https://steamcommunity-a.akamaihd.n
 this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJfxPrMfipP7dezhr-KmsjwPKvBmm5D19V5i_rEprPigVC7vCwwOj6rYOnJI0RpNEbVrAXvlOi8gcDtvZrJziA1vCAqt3-MyRHm0hoYaec-1_3PQF7NVfNIAuDcUWvXnfMD/360fx360f", 2, 720)
     this.generateItem()
     this.meusItems = localStorage.meusItems ? JSON.parse(localStorage.meusItems): []
-    this.saldo = localStorage.saldo ? JSON.parse(localStorage.saldo): 1000
+    this.saldo = localStorage.saldo ? JSON.parse(localStorage.saldo): 700
   },
   methods: {
      itemsAdd(name, image, rari, preco){
@@ -97,8 +97,8 @@ this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.ne
       }
     },
     openCases(){
-      if(this.saldo >= 300){
-      this.saldo -= 300
+      if(this.saldo >= 20){
+      this.saldo -= 20
       this.scroll = 36
       this.open = true
       var haha = 0
