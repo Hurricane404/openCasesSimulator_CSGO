@@ -82,7 +82,7 @@ this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.ne
        var itemRaro = Math.floor(Math.random() * 45)
       var itemRandom = Math.floor(Math.random() * this.items.length)
       var haha = 0;
-      if(itemRaro <= 4){
+      if(itemRaro <= 25){
         haha = 1
       } else{
         while(this.items[itemRandom].preco >= 100 && this.items[itemRandom].preco <= 2000){
@@ -130,6 +130,7 @@ this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.ne
          theme: 'color' + this.newItems[itemRandom].rari
       })
       localStorage.meusItems = JSON.stringify(this.meusItems)
+      localStorage.saldo = JSON.stringify(this.saldo)
       setTimeout(() => this.open = false, 2000);
       setTimeout(() => this.tryAgain = false, 2000);
       }
