@@ -9,7 +9,8 @@ var app = new Vue({
      tryAgain: true,
      saldo: 100,
     meusItems: [],
-    casesValue: 100
+    casesValue: 100,
+    startMoney: 1200
    },
   mounted() {
      this.itemsAdd("AK-47 | Safari Mesh", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zFdC5K08i3mr-GkvP9JrbummpD78A_2LnF9NT0jADj_0BlNWChLdOWewFoNV2C-1TrwOa6h8K66c_JzXVmsz5iuyiPLPTaCA/360fx360f", 0, 1)
@@ -62,7 +63,7 @@ this.itemsAdd("★ Butterfly Knife | Fade", "https://steamcommunity-a.akamaihd.n
 this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJfxPrMfipP7dezhr-KmsjwPKvBmm5D19V5i_rEprPigVC7vCwwOj6rYOnJI0RpNEbVrAXvlOi8gcDtvZrJziA1vCAqt3-MyRHm0hoYaec-1_3PQF7NVfNIAuDcUWvXnfMD/360fx360f", 2, 720)
     this.generateItem()
     this.meusItems = localStorage.meusItems ? JSON.parse(localStorage.meusItems): []
-    this.saldo = localStorage.saldo ? JSON.parse(localStorage.saldo): 700
+    this.saldo = localStorage.saldo ? JSON.parse(localStorage.saldo): this.startMoney
   },
   methods: {
      itemsAdd(name, image, rari, preco){
