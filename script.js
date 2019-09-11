@@ -97,7 +97,7 @@ this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.ne
       if(itemRaro >= 0 && itemRaro <= 40){
         haha = 1
       } else{
-        while(this.newItems[itemRandom].preco <= 360){
+        while(this.newItems[itemRandom].preco >= 100 && this.newItems[itemRandom].preco <= 300){
         var itemRandom = Math.floor(Math.random() * 30)
         }
       }
