@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Csgo open cases simulator</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id="app">
+  <div class="container">
+    <h1 class="saldo"> Seus ganhos ${{ saldo }} </h1>
+    <div class="scroll">
+      <div class="scroller" :style="'transform: translateX(' + scroll + 'vw)'">
+      <div class="item" v-for="newItem in newItems" :class="newItem.theme">
+        <img :src="newItem.image">
+      </div>
+       </div>
+       <div class="open" v-if="!open">
+        <button @click="openCases">Open case $20</button>
+       </div>
+    </div>
+    
+    <div class="seus" v-if="meusItems.length > 0">
+      <h1>Seus items</h1>
+      <div v-for="meusItem in meusItems" style="display: inline-block;">
+      <div class="item"  :class="meusItem.theme">
+        <img :src="meusItem.image">
+      </div>
+      <div class="options" v-if="meusItems.length > 0">
+        <button @click="sellItemUnico(meusItem)">Sell ${{ meusItem.preco }}</button>
+      </div>
+    </div>
+    </div>
+    
+  </div>
+  
+     <div class="gained" v-if="!tryAgain">
+       <div class="ganhou">
+      <h1>{{ gainedItem.name }} ${{ gainedItem.preco }}</h1>
+       <div class="item" :class="gainedItem.theme">
+        <img :src="gainedItem.image">
+        </div>
+         
+         <button @click="tryAgainOk">Try again</button>
+         
+       </div>
+    </div>
+  
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
