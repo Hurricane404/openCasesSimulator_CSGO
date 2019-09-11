@@ -90,10 +90,10 @@ this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.ne
         }
       }
       this.newItems.push({
-         name: this.items[20].name,
-         image: this.items[20].image,
-         rari: this.items[20].rari,
-         preco: this.items[20].preco,
+         name: this.items[itemRandom].name,
+         image: this.items[itemRandom].image,
+         rari: this.items[itemRandom].rari,
+         preco: this.items[itemRandom].preco,
          theme: 'color' + this.items[itemRandom].rari
       })
       }
