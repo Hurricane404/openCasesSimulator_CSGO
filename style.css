@@ -105,13 +105,13 @@ body,html{
 
 .scroll::after{
     content: '';
-    position: fixed;
+    position: absolute;
     top: 50%;
-    left: 58%;
+    left: 24%;
     transform: translate(-50%, -50%);
     height: 18vw;
     width: 7px;
-    top: 17.5vw;
+    top: 12vw;
     background: var(--color2);
     z-index: 10000;
 }
@@ -200,6 +200,7 @@ body,html{
 .seus{
   position: relative;
   top: 18vw;
+  max-width: 91vw;
 }
 
 .seus .item{
