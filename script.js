@@ -82,6 +82,21 @@ var app = new Vue({
         this.itemsAdd("★ Butterfly Knife | Crimson Web", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf0ebcZThQ6tCvq4iSqODxMajum25V4dB8teXA54vwxgW2qEc5NW-iIYORcFI5NwzQ8lS7lOq50MW7tJSbnXQy7yRx4H7bnRGpwUYbInjudbk/360fx360f", 2, 493)
         this.itemsAdd("★ Butterfly Knife | Fade", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf0ebcZThQ6tCvq4GKqPH1N77ummJW4NFOhujT8om7igW1qUY6MWqmcIadcw47MFrW_FK9xbzpgZ607Z7PzSAxuXYg53-Llwv330-D9XTwcQ/360fx360f", 2, 900)
         this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJfxPrMfipP7dezhr-KmsjwPKvBmm5D19V5i_rEprPigVC7vCwwOj6rYOnJI0RpNEbVrAXvlOi8gcDtvZrJziA1vCAqt3-MyRHm0hoYaec-1_3PQF7NVfNIAuDcUWvXnfMD/360fx360f", 2, 720)
+        this.itemsAdd("Revolver Case Key", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXX7gNTPcUxuxpJSXPbQv2S1MDeXkh6LBBOiev1ZVNkgqeRdWUV7o3kltLdzvOjauqCwDlUupAj0-rD843zjAbt_hVtMDjtZNjCJHQgy4g/360fx360f", 0, 2)
+        this.itemsAdd("Chroma Case Key", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXX7gNTPcUxuxpJSXPbQv2S1MDeXkh6LBBOiezrLVYygaCYdDlB79_mwdKIlq-tY-LUlzgB6sYm27-W8dvx0Vey_0ZrY3ezetEQGWlygA/360fx360f", 0, 2)
+        this.itemsAdd("eSports Key", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXX7gNTPcUlrBpNQ0LvROW-0vDYVkRLNhRStbOkJzgxnaXLdDkTuNnmzYbak6byYb2ExGoHvJ1z2b7Fp9igjlflrUJoYmCiJ4KLMlhpukSlLYY/360fx360f", 0, 1)
+        this.itemsAdd("CS:GO Capsule Key", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXX7gNTPcUhvRJeR0nCeOe_1tvWbFZxPEoGt-72fQJiivWeJ2sSvt3uktTcxfbwNenQkGoHuJUj3biRoNqm3wS35QMyNL4TTAx3/360fx360f", 0, 1)
+        this.itemsAdd("Revolver Case", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYwnfKfcG9HvN7iktaOkqD1auLTxD5SvZYgiLvFpo7xjVLh-kdrYWnzcoGLMlhpsyM-5vg/360fx360f", 0, 0.2)
+        this.itemsAdd("Revolver Case", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFYwnfKfcG9HvN7iktaOkqD1auLTxD5SvZYgiLvFpo7xjVLh-kdrYWnzcoGLMlhpsyM-5vg/360fx360f", 0, 0.2)
+        this.itemsAdd("Danger Zone Case", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXU5A1PIYQNqhpOSV-fRPasw8rsUFJ5KBFZv668FFUxnaPLJz5H74y1xtTcz6etNumIx29U6Zd3j7yQoYih3lG1-UJqY27xJIeLMlhpaD9Aclo/360fx360f", 0, 0.4)
+        this.itemsAdd("★ StatTrak™ Huntsman Knife | Safari Mesh", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJfx_LLZTRB7dCJh5C0mvLnO4TFl2Vu4MBwnPD--Y3nj1H6rxFvajz3LYTBelBqMA6E8lnolLvtg5e97Z6cnyRlvSIg4C7dzRKw1AYMMLLMmZlrnA/360fx360f", 2, 253)
+        this.itemsAdd("★ Huntsman Knife | Ultraviolet", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJfx_LLZTRB7dCJl5W0h-LmI7fUqWNE5tFih-jPyoHwjF2hpiwwMiukcZicIAE4MFjRrgXqxOvqhMDptMmfynRluSl0tnfelkDiiBgdbLZmhvPNVxzAUD7WvYVt/360fx360f", 2, 223)
+        this.itemsAdd("★ StatTrak™ Huntsman Knife | Damascus Steel", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJfx_LLZTRB7dCJlZG0k_b5MqjSg3husZVOhuDG_ZjKhFWmrBZyNWHycNPDdg43Z17Rq1C2kLvogZfvuJTJyHM3vSB05HnemhC10kwfO_sv26Ix5Gf1Rg/360fx360f", 2, 193)
+        this.itemsAdd("Desert Eagle | Blaze", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PLJTjtO7dGzh7-HnvD8J4Tdl3lW7Yt1jriVpY-migfh8hBtZTqgcI7Aewc2MgnWqwW-k-zph569uZyfnHMwpGB8slBfgSNs/360fx360f", 2, 403)
+        this.itemsAdd("StatTrak™ Desert Eagle | Code Red", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgposr-kLAtl7PTbTjlH7du6kb-KkPDmNqjCmXlu5Mx2gv3--Y3nj1H6_kI6NTv7I9CVcVdrYQzTqVW4xrrrgZe-6p6ay3ZluiYl4nvVyhO21QYMMLLk7OGppA/360fx360f", 2, 303)
+        this.itemsAdd("★ Shadow Daggers | Urban Masked", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJfw-bbeQJR_OOilZCOqOLmMbrfqWZU7Mxkh9bN9J7yjRri-Bc6N2umJ9fGdQJvM1uC_VDow-a6hZa5u8nMzyE27CAhsC7dlhW1n1gSOQVoKPxT/360fx360f", 2, 90)
+        this.itemsAdd("★ Shadow Daggers | Rust Coat", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJfw-bbeQJD_eOlgIWOm8j_PbLXk1Rc7cF4n-T--Y3nj1H6r0BoN2_7doHHdFQ4MAuB-AK4xby-jZ_o75_AmCMy6yhw4nyMl0Hl1AYMMLJNvl0WOA/360fx360f", 2, 100)
+        this.itemsAdd("★ StatTrak™ Shadow Daggers | Marble Fade", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJfw-bbeQJD4eO7lZKJm_LLNbrVk1Rd4cJ5ntbN9J7yjRqyqBZvNW3wdYWVdQU3ZQyDrAC5wOfnjZG0u8mbm3c3uHV04y7emRS2n1gSOSPHTU8J/360fx360f", 2, 354)
         this.generateItem()
         if (this.abertas > 10) {
             this.rank = 1;
@@ -114,7 +129,7 @@ var app = new Vue({
                 var itemRaro = Math.floor(Math.random() * 45)
                 var itemRandom = Math.floor(Math.random() * this.items.length)
                 var haha = 0;
-                if (itemRaro <= 25) {
+                if (itemRaro <= 10) {
                     haha = 1
                 } else {
                     while (this.items[itemRandom].preco >= 100 && this.items[itemRandom].preco <= 2000) {
@@ -186,10 +201,14 @@ var app = new Vue({
             this.clicou = true
         },
         openEscolherItemUpgradeMeu(){
+            if(this.meusItems.length > 0){
             this.closeEscolherItem = true
+            }
         },
         openEscolherItemUpgrade(){
+            if(this.meusItems.length > 0){
             this.closeEscolherItemUpgrade = true
+            }
         },
         escolherItemUpgardeTroca(item){
             if(!this.upgradeMyItem == ''){
@@ -211,6 +230,7 @@ var app = new Vue({
                 this.upgradeMyItem = this.winImage
                 this.clicou = false
                 const index = this.items.indexOf(this.itemPraUprade)
+                this.meusItems.splice(index, 1)
                 this.meusItems.push(this.itemPraUpgrade)
             }
 
