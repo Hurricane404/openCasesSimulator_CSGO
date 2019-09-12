@@ -138,7 +138,7 @@ var app = new Vue({
                 this.abertas++
                     var haha = 0
                 var itemRaro = Math.floor(Math.random() * 45)
-                var itemRandom = Math.floor(Math.random() * 30)
+                var itemRandom = 30
                 if (itemRaro <= 50) {
                     haha = 1
                 } else {
