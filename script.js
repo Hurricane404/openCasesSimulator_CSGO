@@ -95,6 +95,7 @@ var app = new Vue({
         this.rank = localStorage.rank ? JSON.parse(localStorage.rank) : 0
         this.rankX = -52
         this.rankY = -30 * this.rank
+        this.saldo = Math.round(this.saldo)
     },
     methods: {
         itemsAdd(name, image, rari, preco) {
