@@ -13,8 +13,8 @@
       <a @click="acessarLink(link)" v-for="link in links"> {{ link.name }} </a>
   </div>
   <div class="container">
-    <div class="rank" v-bind:style="'backgroundPosition:' + rankX + 'px ' + rankY + 'px'"></div>
-    <h1 v-if="linkAtivo.name == 'Ganhos'" class="saldo"> Seus ganhos ${{ saldo }} </h1>
+    <!-- <div class="rank" v-bind:style="'backgroundPosition:' + rankX + 'px ' + rankY + 'px'"></div> -->
+    <h1 class="saldo"> Seus ganhos ${{ saldo }} </h1>
     <div v-if="linkAtivo.name == 'Roleta'" class="scroll">
     <h1 style="position: relative; z-index: 5000">Roleta</h1>
       <div class="scroller" :style="'transform: translateX(' + scroll + 'vw)'">
@@ -37,8 +37,29 @@
         <button @click="sellItemUnico(meusItem)">Sell ${{ meusItem.preco }}</button>
       </div>
     </div>
+    </div>  
+  </div>
+
+  <div v-if="linkAtivo.name == 'Upgrade'" class="upgrade" style="padding: 60px">
+    <h1>Upgrade</h1>
+    <div class="up">
+
+      <h1 style="position: relative; top: 18vw; left:6vw;">Item pra upgrade</h1>
+      <div class="item" @click="openEscolherItemUpgradeMeu" :class="upgradeMyItem.theme">
+        <img :src="upgradeMyItem.image">
+      </div>
+
+      <div class="status" v-bind:class="{ yes: ganhouUpgrade, 'no': !ganhouUpgrade }"></div>
+
+      <h1 style="position: absolute; top: 18vw; left:71vw;">Item que queres ganhar</h1>
+      <div class="item other" @click="openEscolherItemUpgrade" :class="itemPraUpgrade.theme">
+        <img :src="itemPraUpgrade.image">
+      </div>
+
+      <button style="top: 20vw;" v-if="!upgradeMyItem.image == '' && !itemPraUpgrade.image == '' && clicou" @click="upgradeItem">Upgrade</button>
+      <button style="top: 20vw;" v-else="">Escolha um item</button>
+
     </div>
-    
   </div>
   
      <div class="gained" v-if="!tryAgain">
@@ -49,6 +70,18 @@
         </div>
          <button @click="tryAgainOk">Try again</button>
        </div>
+    </div>
+
+    <div class="escolher" v-if="closeEscolherItem">
+      <div class="item" v-for="meusItem in meusItems" :class="meusItem.theme" @click="escolherItemPraUpgrade(meusItem)">
+        <img :src="meusItem.image">
+      </div>
+    </div>
+
+    <div class="escolher" v-if="closeEscolherItemUpgrade">
+      <div class="item" v-if="item.preco > upgradeMyItem.preco" v-for="item in items" :class="item.theme" @click="escolherItemUpgardeTroca(item)">
+        <img :src="item.image">
+      </div>
     </div>
   
 </div>

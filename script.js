@@ -13,13 +13,25 @@ var app = new Vue({
         startMoney: 1200,
         links: [
             { "name": "Roleta" },
+            {"name" : "Upgrade"},
             { "name": "Ganhos" }
         ],
         linkAtivo: { "name": "Roleta" },
         abertas: 0,
         rank: 0,
         rankX: -52,
-        rankY: -11
+        rankY: -11,
+        upgradeMyItem: {},
+        closeEscolherItem: false,
+        closeEscolherItemUpgrade: false,
+        itemPraUpgrade: {},
+        ganhouUpgrade: false,
+        isActive: true,
+        hasError: false,
+        clicou: false,
+        itemBlank: {"name" : "AK-47 | Safari Mesh","image" :  "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zFdC5K08i3mr-GkvP9JrbummpD78A_2LnF9NT0jADj_0BlNWChLdOWewFoNV2C-1TrwOa6h8K66c_JzXVmsz5iuyiPLPTaCA/360fx360f"},
+        winImage: {"name" : "0", "image": "http://pluspng.com/img-png/win-png-subscribe-343.png"},
+        loseImage: {"name" : "0", "image": "https://pngimage.net/wp-content/uploads/2018/06/lose-png-7.png"}
     },
     mounted() {
         this.itemsAdd("AK-47 | Safari Mesh", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zFdC5K08i3mr-GkvP9JrbummpD78A_2LnF9NT0jADj_0BlNWChLdOWewFoNV2C-1TrwOa6h8K66c_JzXVmsz5iuyiPLPTaCA/360fx360f", 0, 1)
@@ -174,6 +186,46 @@ var app = new Vue({
         acessarLink(link) {
             this.linkAtivo = link
             console.log(link.name)
+        },
+        escolherItemPraUpgrade(item){
+            this.upgradeMyItem = item
+            this.itemPraUpgrade = item
+            this.closeEscolherItem = false
+            this.clicou = true
+        },
+        openEscolherItemUpgradeMeu(){
+            this.closeEscolherItem = true
+        },
+        openEscolherItemUpgrade(){
+            this.closeEscolherItemUpgrade = true
+        },
+        escolherItemUpgardeTroca(item){
+            this.itemPraUpgrade = item
+            this.closeEscolherItemUpgrade = false
+        },
+        upgradeItem(){
+            var changeGanhar = Math.floor(Math.random() * 6)
+            if(changeGanhar >= 0 && changeGanhar <= 3){
+                this.ganhouUpgrade = false
+                console.log("Vc perdeu");
+                this.upgradeMyItem = this.loseImage
+                this.itemsPraUpgrade = this.loseImage
+                const index = this.items.indexOf(this.upgradeMyItem)
+                this.meusItems.splice(index, 1)
+                this.clicou = false
+            } else{
+                console.log("Vc ganhou");
+                this.ganhouUpgrade = true
+                this.upgradeMyItem = this.winImage
+                this.clicou = false
+                const index = this.items.indexOf(this.itemPraUprade)
+                this.meusItems.push(this.itemPraUpgrade)
+            }
+
+            localStorage.saldo = JSON.stringify(this.saldo)
+            localStorage.meusItems = JSON.stringify(this.meusItems)
+            localStorage.rank = JSON.stringify(this.rank)
+           
         }
     }
 })

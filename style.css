@@ -153,6 +153,21 @@ html {
     outline: none;
 }
 
+button {
+    position: absolute;
+    top: 40%;
+    left: 28.5%;
+    border: none;
+    background: rgba(0, 0, 0, .90);
+    color: #fff;
+    padding: 20px;
+    border: 2px solid #2c97de;
+    border-image: -webkit-linear-gradient(bottom, #2c97de, rgba(200, 200, 200, 0)) 20 stretch;
+    cursor: pointer;
+    z-index: 2000;
+    outline: none;
+}
+
 .open::before {
     content: '';
     width: 100%;
@@ -213,13 +228,14 @@ button {
 .saldo {
     position: relative;
     padding: 5px;
-    top: 7vw;
+    top: 3vw;
     left: 2vw;
 }
 
 .seus {
     position: relative;
-    top: 15vw;
+    top: 4vw;
+    padding: 40px;
     max-width: 100%;
 }
 
@@ -267,4 +283,73 @@ button {
     background-position: -53px -11px;
     position: relative;
     top: 57px;
+}
+
+.upgrade{
+    position: relative;
+    width: 100%;
+}
+
+.saldo{
+    z-index: 5000;
+}
+
+.upgrade h1{
+    position: relative;
+    z-index: 2000;
+}
+
+.upgrade .up{
+    position: fixed;
+    width: 100%;
+    height: 50vw;
+    left: 0px;
+    background: rgba(0, 0, 0, .70);
+    top: 20px;
+}
+
+.upgrade .up .item{
+    position: absolute;
+    top: 24vw;
+    left: 6vw;
+    cursor: pointer;
+}
+
+.upgrade .up .status{
+    position: absolute;
+    top: 24vw;
+    left: 40vw;
+    background: var(--color2);
+    width: 17vw;
+    height: 17vw;
+    border-radius: 50%;
+}
+
+.upgrade .yes{
+    background: #2cde8c !important;
+}
+
+.upgrade .no{
+    background: #de2c2c !important;
+}
+
+.upgrade .up .other{
+    position: absolute;
+    left: 71vw;
+    top: 24vw;
+}
+
+.escolher{
+    position: fixed;
+    background: #000;
+    height: 100%;
+    width: 100%;
+    top: 0px;
+    z-index: 50000000000;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.escolher .item{
+    cursor: pointer;
 }
