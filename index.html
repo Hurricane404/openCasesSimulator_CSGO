@@ -10,7 +10,7 @@
 <!-- partial:index.partial.html -->
 <div id="app">
   <div class="header">
-      <a @click="acessarLink(link)" v-for="link in links"> {{ link.name }} </a>
+      <a @click="acessarLink(link)" v-for="link in links"> <span v-if="link.name == 'Upgrade' && meusItems.length > 0"> {{ link.name }} </span> <span v-else=""> <span v-if="link.name == 'Roleta' || link.name == 'Ganhos'"> {{ link.name }}</span> </a>
   </div>
   <div class="container">
     <!-- <div class="rank" v-bind:style="'backgroundPosition:' + rankX + 'px ' + rankY + 'px'"></div> -->
@@ -77,7 +77,7 @@
       </div>
     </div>
 
-    <div class="escolher" v-if="closeEscolherItemUpgrade && !upgradeMyItem.image == ''">
+    <div class="escolher" v-if="closeEscolherItemUpgrade && !upgradeMyItem.image == '' && item.preco > upgradeMyItem.preco">
       <div class="item" v-if="item.preco > upgradeMyItem.preco" v-for="item in items" :class="item.theme" @click="escolherItemUpgardeTroca(item)">
         <img :src="item.image">
       </div>
