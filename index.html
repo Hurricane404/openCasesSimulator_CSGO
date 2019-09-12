@@ -77,8 +77,8 @@
       </div>
     </div>
 
-    <div class="escolher" v-if="closeEscolherItemUpgrade && !upgradeMyItem.image == '' && item.preco > upgradeMyItem.preco">
-      <div class="item" v-if="item.preco > upgradeMyItem.preco" v-for="item in items" :class="item.theme" @click="escolherItemUpgardeTroca(item)">
+    <div class="escolher" v-if="closeEscolherItemUpgrade && !upgradeMyItem.image == ''">
+      <div class="item" v-if="item.preco > upgradeMyItem.preco || item.preco == upgradeMyItem.preco" v-for="item in items" :class="item.theme" @click="escolherItemUpgardeTroca(item)">
         <img :src="item.image">
       </div>
     </div>
