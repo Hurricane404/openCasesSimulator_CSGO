@@ -201,8 +201,10 @@ var app = new Vue({
             this.closeEscolherItemUpgrade = true
         },
         escolherItemUpgardeTroca(item){
+            if(!this.upgradeMyItem == ''){
             this.itemPraUpgrade = item
             this.closeEscolherItemUpgrade = false
+            }
         },
         upgradeItem(){
             var changeGanhar = Math.floor(Math.random() * 6)
