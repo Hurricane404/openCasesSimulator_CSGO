@@ -222,14 +222,14 @@ var app = new Vue({
                 this.ganhouUpgrade = false
                 this.upgradeMyItem = this.loseImage
                 this.itemsPraUpgrade = this.loseImage
-                const index = this.items.indexOf(this.upgradeMyItem)
+                const index = this.items.indexOf(this.itemPraUpgrade)
                 this.meusItems.splice(index, 1)
                 this.clicou = false
             } else{  
                 this.ganhouUpgrade = true
                 this.upgradeMyItem = this.winImage
                 this.clicou = false
-                const index = this.items.indexOf(this.itemPraUprade)
+                const index = this.items.indexOf(this.upgradeMyItem)
                 this.meusItems.splice(index, 1)
                 this.meusItems.push(this.itemPraUpgrade)
             }
