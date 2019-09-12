@@ -220,7 +220,7 @@ button {
 .seus {
     position: relative;
     top: 15vw;
-    max-width: 91vw;
+    max-width: 100%;
 }
 
 .seus .item {
