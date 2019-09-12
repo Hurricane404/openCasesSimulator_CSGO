@@ -134,6 +134,7 @@ var app = new Vue({
                     preco: this.newItems[itemRandom].preco,
                     theme: 'color' + this.newItems[itemRandom].rari
                 })
+                this.saldo =  Math.round(this.saldo) 
                 localStorage.meusItems = JSON.stringify(this.meusItems)
                 localStorage.saldo = JSON.stringify(this.saldo)
                 setTimeout(() => this.open = false, 2000);
@@ -149,6 +150,7 @@ var app = new Vue({
             const index = this.meusItems.indexOf(item)
             this.saldo += this.meusItems[index].preco
             this.meusItems.splice(index, 1)
+            this.saldo =  Math.round(this.saldo) 
             localStorage.saldo = JSON.stringify(this.saldo)
             localStorage.meusItems = JSON.stringify(this.meusItems)
         },
