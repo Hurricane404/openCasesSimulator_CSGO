@@ -72,13 +72,13 @@
        </div>
     </div>
 
-    <div class="escolher" v-if="closeEscolherItem">
+    <div class="escolher" v-if="closeEscolherItem && meusItems.length > 0">
       <div class="item" v-for="meusItem in meusItems" :class="meusItem.theme" @click="escolherItemPraUpgrade(meusItem)">
         <img :src="meusItem.image">
       </div>
     </div>
 
-    <div class="escolher" v-if="closeEscolherItemUpgrade">
+    <div class="escolher" v-if="closeEscolherItemUpgrade && !upgradeMyItem.image == ''">
       <div class="item" v-if="item.preco > upgradeMyItem.preco" v-for="item in items" :class="item.theme" @click="escolherItemUpgardeTroca(item)">
         <img :src="item.image">
       </div>
