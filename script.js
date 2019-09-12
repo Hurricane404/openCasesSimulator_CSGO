@@ -31,7 +31,7 @@ var app = new Vue({
         clicou: false,
         itemBlank: {"name" : "AK-47 | Safari Mesh","image" :  "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zFdC5K08i3mr-GkvP9JrbummpD78A_2LnF9NT0jADj_0BlNWChLdOWewFoNV2C-1TrwOa6h8K66c_JzXVmsz5iuyiPLPTaCA/360fx360f"},
         winImage: {"name" : "0", "image": "http://pluspng.com/img-png/win-png-subscribe-343.png"},
-        loseImage: {"name" : "0", "image": "https://pngimage.net/wp-content/uploads/2018/06/lose-png-7.png"}
+        loseImage: {"name" : "0", "image": "https://pngimage.net/wp-content/uploads/2018/06/you-lose-png-4.png"}
     },
     mounted() {
         this.itemsAdd("AK-47 | Safari Mesh", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zFdC5K08i3mr-GkvP9JrbummpD78A_2LnF9NT0jADj_0BlNWChLdOWewFoNV2C-1TrwOa6h8K66c_JzXVmsz5iuyiPLPTaCA/360fx360f", 0, 1)
@@ -136,16 +136,7 @@ var app = new Vue({
                 this.scroll = 36
                 this.open = true
                 this.abertas++
-                    var haha = 0
-                var itemRaro = Math.floor(Math.random() * 45)
                 var itemRandom = 30
-                if (itemRaro <= 50) {
-                    haha = 1
-                } else {
-                    while (this.newItems[itemRandom].preco >= 100 && this.newItems[itemRandom].preco <= 2000) {
-                        var itemRandom = Math.floor(Math.random() * 30)
-                    }
-                }
                 this.gainedItem = {
                     name: this.newItems[itemRandom].name,
                     image: this.newItems[itemRandom].image,
@@ -208,16 +199,14 @@ var app = new Vue({
         },
         upgradeItem(){
             var changeGanhar = Math.floor(Math.random() * 6)
-            if(changeGanhar >= 0 && changeGanhar <= 3){
+            if(changeGanhar > 0 && changeGanhar < 4){
                 this.ganhouUpgrade = false
-                console.log("Vc perdeu");
                 this.upgradeMyItem = this.loseImage
                 this.itemsPraUpgrade = this.loseImage
                 const index = this.items.indexOf(this.upgradeMyItem)
                 this.meusItems.splice(index, 1)
                 this.clicou = false
-            } else{
-                console.log("Vc ganhou");
+            } else{  
                 this.ganhouUpgrade = true
                 this.upgradeMyItem = this.winImage
                 this.clicou = false
