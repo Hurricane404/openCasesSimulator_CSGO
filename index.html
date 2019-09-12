@@ -13,7 +13,7 @@
       <a @click="acessarLink(link)" v-for="link in links"> {{ link.name }} </a>
   </div>
   <div class="container">
-
+    <div class="rank" v-bind:style="'backgroundPosition:' + rankX + 'px ' + rankY + 'px'"></div>
     <h1 v-if="linkAtivo.name == 'Ganhos'" class="saldo"> Seus ganhos ${{ saldo }} </h1>
     <div v-if="linkAtivo.name == 'Roleta'" class="scroll">
     <h1 style="position: relative; z-index: 5000">Roleta</h1>

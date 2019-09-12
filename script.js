@@ -15,7 +15,11 @@ var app = new Vue({
             { "name": "Roleta" },
             { "name": "Ganhos" }
         ],
-        linkAtivo: { "name": "Roleta" }
+        linkAtivo: { "name": "Roleta" },
+        abertas: 0,
+        rank: 0,
+        rankX: -52,
+        rankY: -11
     },
     mounted() {
         this.itemsAdd("AK-47 | Safari Mesh", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpot7HxfDhzw8zFdC5K08i3mr-GkvP9JrbummpD78A_2LnF9NT0jADj_0BlNWChLdOWewFoNV2C-1TrwOa6h8K66c_JzXVmsz5iuyiPLPTaCA/360fx360f", 0, 1)
@@ -67,8 +71,18 @@ var app = new Vue({
         this.itemsAdd("★ Butterfly Knife | Fade", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJf0ebcZThQ6tCvq4GKqPH1N77ummJW4NFOhujT8om7igW1qUY6MWqmcIadcw47MFrW_FK9xbzpgZ607Z7PzSAxuXYg53-Llwv330-D9XTwcQ/360fx360f", 2, 900)
         this.itemsAdd("★ Talon Knife | Doppler", "https://steamcommunity-a.akamaihd.net/economy/image/-9a81dlWLwJ2UUGcVs_nsVtzdOEdtWwKGZZLQHTxDZ7I56KU0Zwwo4NUX4oFJZEHLbXH5ApeO4YmlhxYQknCRvCo04DEVlxkKgpovbSsLQJfxPrMfipP7dezhr-KmsjwPKvBmm5D19V5i_rEprPigVC7vCwwOj6rYOnJI0RpNEbVrAXvlOi8gcDtvZrJziA1vCAqt3-MyRHm0hoYaec-1_3PQF7NVfNIAuDcUWvXnfMD/360fx360f", 2, 720)
         this.generateItem()
+        if (this.abertas > 10) {
+            this.rank = 1;
+        } else if (this.abertas > 20) {
+            this.rank = 2;
+        } else if (this.abertas > 40) {
+            this.rank = 3;
+        }
         this.meusItems = localStorage.meusItems ? JSON.parse(localStorage.meusItems) : []
         this.saldo = localStorage.saldo ? JSON.parse(localStorage.saldo) : this.startMoney
+        this.rank = localStorage.rank ? JSON.parse(localStorage.rank) : 0
+        this.rankX = -52
+        this.rankY = -30 * this.rank
     },
     methods: {
         itemsAdd(name, image, rari, preco) {
@@ -108,7 +122,8 @@ var app = new Vue({
                 this.saldo -= this.casesValue
                 this.scroll = 36
                 this.open = true
-                var haha = 0
+                this.abertas++
+                    var haha = 0
                 var itemRaro = Math.floor(Math.random() * 45)
                 var itemRandom = Math.floor(Math.random() * 30)
                 if (itemRaro <= 50) {
@@ -134,9 +149,10 @@ var app = new Vue({
                     preco: this.newItems[itemRandom].preco,
                     theme: 'color' + this.newItems[itemRandom].rari
                 })
-                this.saldo =  Math.round(this.saldo) 
+                this.saldo = Math.round(this.saldo)
                 localStorage.meusItems = JSON.stringify(this.meusItems)
                 localStorage.saldo = JSON.stringify(this.saldo)
+                localStorage.rank = JSON.stringify(this.rank)
                 setTimeout(() => this.open = false, 2000);
                 setTimeout(() => this.tryAgain = false, 2000);
             }
@@ -150,9 +166,10 @@ var app = new Vue({
             const index = this.meusItems.indexOf(item)
             this.saldo += this.meusItems[index].preco
             this.meusItems.splice(index, 1)
-            this.saldo =  Math.round(this.saldo) 
+            this.saldo = Math.round(this.saldo)
             localStorage.saldo = JSON.stringify(this.saldo)
             localStorage.meusItems = JSON.stringify(this.meusItems)
+            localStorage.rank = JSON.stringify(this.rank)
         },
         acessarLink(link) {
             this.linkAtivo = link

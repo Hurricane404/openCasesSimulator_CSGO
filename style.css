@@ -259,3 +259,12 @@ button {
 .seus h1 {
     width: 100%;
 }
+
+.rank {
+    background-image: url(https://cdn.ligadosgames.com/imagens/patentes-cs-go-og.jpg);
+    width: 129px;
+    height: 52px;
+    background-position: -53px -11px;
+    position: relative;
+    top: 57px;
+}
