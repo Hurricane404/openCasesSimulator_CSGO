@@ -117,7 +117,7 @@ html {
 }
 
 .scroller {
-    transition: 1s;
+    transition: 3s;
     transform: translateX(0vw);
 }
 
