@@ -3,11 +3,26 @@
     height: 6px!important;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: var(--green   );
+    background-color: #151515;
     border-radius: 40px;
 }
 ::-webkit-scrollbar-track {
     background: hsla(0,0%,100%,.08);
+}
+
+body,html{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, "Helvetica Neue", sans-serif !important;
+    color: #4b4b4b;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "kern";
+    -webkit-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern";
+    -moz-font-feature-settings: "kern=1";
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: var(--body);
 }
 
 
