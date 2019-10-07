@@ -172,7 +172,7 @@ const app = new Vue({
                 localStorage.meusItems = JSON.stringify(this.meusItems)
                 localStorage.saldo = JSON.stringify(this.saldo)
                 localStorage.rank = JSON.stringify(this.rank)
-                setTimeout(() => this.scroll = 36, 400)
+                setTimeout(() => this.scroll = 36, 2000)
                 setTimeout(() => this.open = false, 2000)
                 setTimeout(() => this.tryAgain = false, 2000)
             }
@@ -222,10 +222,9 @@ const app = new Vue({
             if(changeGanhar > 0 && changeGanhar < 4){
                 this.ganhouUpgrade = false
                 this.upgradeMyItem = this.loseImage
-                this.itemsPraUpgrade = this.loseImage
+                this.clicou = false
                 const index = this.items.indexOf(this.itemPraUpgrade)
                 this.meusItems.splice(index, 1)
-                this.clicou = false
             } else{  
                 this.ganhouUpgrade = true
                 this.upgradeMyItem = this.winImage
