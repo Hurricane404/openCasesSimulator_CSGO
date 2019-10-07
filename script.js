@@ -1,4 +1,4 @@
-var app = new Vue({
+const app = new Vue({
     el: "#app",
     data: {
         items: [],
@@ -172,9 +172,9 @@ var app = new Vue({
                 localStorage.meusItems = JSON.stringify(this.meusItems)
                 localStorage.saldo = JSON.stringify(this.saldo)
                 localStorage.rank = JSON.stringify(this.rank)
+                setTimeout(() => this.scroll = 36, 400)
                 setTimeout(() => this.open = false, 2000)
                 setTimeout(() => this.tryAgain = false, 2000)
-                console.log('work');
             }
         },
         tryAgainOk() {
