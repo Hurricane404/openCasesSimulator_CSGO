@@ -149,7 +149,9 @@ const app = new Vue({
         },
         openCases() {
             if (this.saldo >= this.casesValue) {
+                for(var i = 0; i < 9; i++){
                 rollete.play();
+                }
                 this.saldo -= this.casesValue
                 this.scroll = 36
                 this.open = true
