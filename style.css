@@ -1,7 +1,12 @@
 .container {
     position: relative;
     margin: 0px auto;
-    max-width: 100%;
+    max-width: 1300px;
+    overflow: hidden;
+    left: 5vw;
+    transform: translate(10%, 0%);
+    height: 40vw;
+    padding: 5vw;
 }
 
 :root {
