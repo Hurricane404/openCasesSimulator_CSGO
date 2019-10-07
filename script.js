@@ -1,4 +1,4 @@
-const app = new Vue({
+var app = new Vue({
     el: "#app",
     data: {
         items: [],
@@ -173,7 +173,7 @@ const app = new Vue({
                 localStorage.saldo = JSON.stringify(this.saldo)
                 localStorage.rank = JSON.stringify(this.rank)
                 setTimeout(() => this.open = false, 2000);
-                setTimeout(() => this.tryAgain = false, 500);
+                setTimeout(() => this.tryAgain = false, 2000);
             }
         },
         tryAgainOk() {
