@@ -112,7 +112,7 @@ const app = new Vue({
         this.rank = localStorage.rank ? JSON.parse(localStorage.rank) : 0
         this.rankX = -52
         this.rankY = -30 * this.rank
-        this.saldo = Math.round(this.saldo)
+        this.saldo = Math.round(this.saldo, 2)
     },
     methods: {
         itemsAdd(name, image, rari, preco) {
@@ -173,7 +173,7 @@ const app = new Vue({
                     preco: this.newItems[itemRandom].preco,
                     theme: 'color' + this.newItems[itemRandom].rari
                 })
-                this.saldo = Math.round(this.saldo)
+                this.saldo = Math.round(this.saldo, 2)
                 localStorage.meusItems = JSON.stringify(this.meusItems)
                 localStorage.saldo = JSON.stringify(this.saldo)
                 localStorage.rank = JSON.stringify(this.rank)
@@ -192,7 +192,7 @@ const app = new Vue({
             const index = this.meusItems.indexOf(item)
             this.saldo += this.meusItems[index].preco
             this.meusItems.splice(index, 1)
-            this.saldo = Math.round(this.saldo)
+            this.saldo = Math.round(this.saldo, 2)
             localStorage.saldo = JSON.stringify(this.saldo)
             localStorage.meusItems = JSON.stringify(this.meusItems)
             localStorage.rank = JSON.stringify(this.rank)
