@@ -176,7 +176,7 @@ const app = new Vue({
                 localStorage.saldo = JSON.stringify(this.saldo)
                 localStorage.rank = JSON.stringify(this.rank)
                 setTimeout(() => this.scroll = 36, 2000)
-                setTimeout(() => rollete.stop() , 2000)
+                setTimeout(() => sound.pause(), 2000)
                 setTimeout(() => this.open = false, 2000)
                 setTimeout(() => this.tryAgain = false, 2000)
             }
