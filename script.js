@@ -1,3 +1,5 @@
+var rollete = new Audio('roulette_spin.wav');
+
 const app = new Vue({
     el: "#app",
     data: {
@@ -146,6 +148,7 @@ const app = new Vue({
         },
         openCases() {
             if (this.saldo >= this.casesValue) {
+                rollete.play();
                 this.saldo -= this.casesValue
                 this.scroll = 36
                 this.open = true
