@@ -130,7 +130,7 @@ html {
     content: '';
     position: absolute;
     top: 50%;
-    left: 24%;
+    left: 25%;
     transform: translate(-50%, -50%);
     height: 100%;
     width: 7px;
