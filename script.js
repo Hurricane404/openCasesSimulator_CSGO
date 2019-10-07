@@ -13,7 +13,6 @@ const app = new Vue({
         startMoney: 1200,
         links: [
             { "name": "Roleta" },
-            {"name" : "Upgrade"},
             { "name": "Ganhos" }
         ],
         linkAtivo: { "name": "Roleta" },
