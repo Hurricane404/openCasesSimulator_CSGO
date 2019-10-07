@@ -1,4 +1,4 @@
-var app = new Vue({
+new Vue({
     el: "#app",
     data: {
         items: [],
@@ -174,6 +174,7 @@ var app = new Vue({
                 localStorage.rank = JSON.stringify(this.rank)
                 setTimeout(() => this.open = false, 2000);
                 setTimeout(() => this.tryAgain = false, 2000);
+                this.scroll = 36
             }
         },
         tryAgainOk() {
