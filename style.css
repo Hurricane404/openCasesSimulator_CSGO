@@ -146,7 +146,7 @@ html {
     transition: background-image .3s;
     display: inline-block;
     margin-left: 0vw;
-    left: 0px;
+    left: -350px;
 }
 
 .item img {
@@ -159,7 +159,7 @@ html {
     content: '';
     position: absolute;
     top: 50%;
-    left: 468px;
+    left: 450px;
     transform: translate(-50%, -50%);
     height: 100%;
     width: 7px;
