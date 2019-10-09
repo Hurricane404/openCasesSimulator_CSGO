@@ -8,7 +8,7 @@ const app = new Vue({
         newItems: [],
         open: false,
         gainedItem: [],
-        scroll: 677,
+        scroll: 0,
         tryAgain: true,
         saldo: 100,
         meusItems: [],
@@ -177,14 +177,14 @@ const app = new Vue({
                 localStorage.meusItems = JSON.stringify(this.meusItems)
                 localStorage.saldo = JSON.stringify(this.saldo)
                 localStorage.rank = JSON.stringify(this.rank)
-                setTimeout(() => this.scroll = 677, 4000)
+                setTimeout(() => this.scroll = 0    , 4000)
                 setTimeout(() => rollete.pause(), 3400)
                 setTimeout(() => this.open = false, 4000)
                 setTimeout(() => this.tryAgain = false, 4000)
             }
         },
         tryAgainOk() {
-            this.scroll = 677
+            this.scroll = 0
             this.generateItem()
             this.tryAgain = true
         },
