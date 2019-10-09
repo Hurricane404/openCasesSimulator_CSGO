@@ -164,7 +164,7 @@ const app = new Vue({
                     preco: this.newItems[itemRandom].preco,
                     theme: 'color' + this.newItems[itemRandom].rari
                 }
-                this.scroll -= itemRandom * 200
+                this.scroll -= itemRandom * 320
                 console.log("Você ganhou " + this.gainedItem.name + "id" + itemRandom)
                 this.meusItems.push({
                     name: this.newItems[itemRandom].name,
