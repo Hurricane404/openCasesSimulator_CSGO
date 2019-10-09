@@ -278,7 +278,7 @@ button {
     padding: 40px;
     max-width: 100%;
     overflow-y: auto;
-    height: 30vw;
+    height: 300px;
 }
 
 .seus .item {
@@ -291,14 +291,15 @@ button {
 }
 
 .seus .options {
-    width: 18vw;
-    height: 17.8vw;
+    width: 200px;
+    height: 200px;
     background: rgba(0, 0, 0, .70);
     position: relative;
     top: 0vw;
-    left: -0.5vw;
+    left: -70px;
     z-index: 10000;
     opacity: 0;
+    margin-left: 198px;
     transition: 1s;
     display: inline-block;
 }
