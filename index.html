@@ -17,7 +17,7 @@
     <h1 class="saldo"> Seus ganhos ${{ saldo }} </h1>
     <div v-if="linkAtivo.name == 'Roleta'" class="scroll">
     <h1 style="position: relative; z-index: 5000">Roleta</h1>
-      <div class="scroller" :style="'transform: translateX(' + scroll + 'vw)'">
+      <div class="scroller" :style="'transform: translateX(' + scroll + 'px)'">
       <div class="item" v-for="newItem in newItems" :class="newItem.theme">
         <img :src="newItem.image">
       </div>
