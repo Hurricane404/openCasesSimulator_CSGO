@@ -295,13 +295,13 @@ button {
     height: 200px;
     background: rgba(0, 0, 0, .70);
     position: relative;
-    top: 0vw;
-    left: -70px;
+    top: -213px;
+    left: 0px;
     z-index: 10000;
     opacity: 0;
-    margin-left: 198px;
+    margin-left: 0px;
     transition: 1s;
-    display: inline-block;
+    display: table-columninline-block;
 }
 
 .options button {
