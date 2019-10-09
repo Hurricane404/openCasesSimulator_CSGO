@@ -29,11 +29,11 @@ body,html{
 .container {
     position: relative;
     margin: 0px auto;
-    max-width: 1300px;
+    max-width: 700px;
     overflow: hidden;
     left: 5vw;
     transform: translate(10%, 0%);
-    height: 40vw;
+    height: 500px;
     padding: 5vw;
 }
 
@@ -122,8 +122,8 @@ html {
 }
 
 .item {
-    width: 18vw;
-    height: 18vw;
+    width: 200px;
+    height: 200px;
     margin: 10px 0;
     border: 2px solid #2c97de;
     border-image: -webkit-linear-gradient(bottom, #2c97de, rgba(200, 200, 200, 0)) 20 stretch;
@@ -146,6 +146,7 @@ html {
     transition: background-image .3s;
     display: inline-block;
     margin-left: 0vw;
+    left: -333px;
 }
 
 .item img {
@@ -158,7 +159,7 @@ html {
     content: '';
     position: absolute;
     top: 50%;
-    left: 25%;
+    left: 468px;
     transform: translate(-50%, -50%);
     height: 100%;
     width: 7px;
@@ -189,7 +190,7 @@ html {
 .open button {
     position: absolute;
     top: 40%;
-    left: 28.5%;
+    left: 500px;
     border: none;
     background: rgba(0, 0, 0, .90);
     color: #fff;
