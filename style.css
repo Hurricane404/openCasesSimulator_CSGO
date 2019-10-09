@@ -146,7 +146,7 @@ html {
     transition: background-image .3s;
     display: inline-block;
     margin-left: 0vw;
-    left: -350px;
+    left: 320px;
 }
 
 .item img {
