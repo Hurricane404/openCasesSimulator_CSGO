@@ -8,7 +8,7 @@ const app = new Vue({
         newItems: [],
         open: false,
         gainedItem: [],
-        scroll: 0,
+        scroll: -200,
         tryAgain: true,
         saldo: 100,
         meusItems: [],
@@ -164,7 +164,7 @@ const app = new Vue({
                     preco: this.newItems[itemRandom].preco,
                     theme: 'color' + this.newItems[itemRandom].rari
                 }
-                this.scroll -= itemRandom * 250
+                this.scroll -= itemRandom * 400
                 console.log("Você ganhou " + this.gainedItem.name + "id" + itemRandom)
                 this.meusItems.push({
                     name: this.newItems[itemRandom].name,
@@ -177,14 +177,14 @@ const app = new Vue({
                 localStorage.meusItems = JSON.stringify(this.meusItems)
                 localStorage.saldo = JSON.stringify(this.saldo)
                 localStorage.rank = JSON.stringify(this.rank)
-                setTimeout(() => this.scroll = 0    , 4000)
+                setTimeout(() => this.scroll = -200, 4000)
                 setTimeout(() => rollete.pause(), 3400)
                 setTimeout(() => this.open = false, 4000)
                 setTimeout(() => this.tryAgain = false, 4000)
             }
         },
         tryAgainOk() {
-            this.scroll = 0
+            this.scroll = -200
             this.generateItem()
             this.tryAgain = true
         },
