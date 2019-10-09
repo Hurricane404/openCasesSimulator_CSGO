@@ -284,6 +284,7 @@ button {
 .seus .item {
     margin-left: -18vw;
     left: 18vw;
+    margin-top: -152px;
 }
 
 .seus .options:hover {
