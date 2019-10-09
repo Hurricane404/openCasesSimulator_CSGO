@@ -123,7 +123,7 @@ html {
 }
 
 .scroller {
-    transition: 3s;
+    transition: 3s cubic-bezier(0.42, 0, 0, 1.05);
     transform: translateX(0vw);
 }
 
